@@ -1,0 +1,105 @@
+body {
+    background-image: url("cloud.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+/* TOP ZONE */
+#top-zone {
+    padding: 25px 40px;
+    text-align: center;
+    background-color: rgba(15, 10, 35, 0.65);
+}
+
+/* Welcome heading */
+#welcome {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    color: #fc49ff;
+}
+
+/* MAIN ZONE */
+#main-zone {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px;
+    min-height: 65vh;
+}
+
+/* Description section */
+#description {
+    flex: 1;
+    max-width: 650px;
+}
+
+/* Main paragraph heading */
+h1 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #e552ff;
+}
+
+/* Lo-fi image */
+#lofi-image {
+    width: 350px;
+    max-width: 40%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 700px) {
+    #main-zone {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px;
+    }
+
+    #description {
+        max-width: 100%;
+    }
+
+    #lofi-image {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+}
+#image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* First image */
+#lofi-image {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Second image */
+#lofi-image-2 {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
