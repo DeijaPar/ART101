@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Environment 04</title>
+
+<link href="env04.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="env04.js" defer></script>
+</head>
+
+<body>
+
+<!-- NEW FOR ENV04: a see-through layer that tints the sky -->
+<div id="sky-tint"></div>
+
+<!-- NEW FOR ENV04: stars that only appear at night -->
+<div id="stars">
+    <span class="star" style="top: 12%; left: 8%;">✦</span>
+    <span class="star" style="top: 22%; left: 30%;">✧</span>
+    <span class="star" style="top: 8%; left: 55%;">✦</span>
+    <span class="star" style="top: 30%; left: 78%;">✧</span>
+    <span class="star" style="top: 15%; left: 90%;">✦</span>
+    <span class="star" style="top: 55%; left: 5%;">✧</span>
+    <span class="star" style="top: 70%; left: 48%;">✦</span>
+    <span class="star" style="top: 85%; left: 88%;">✧</span>
+</div>
+
+<div id="top-zone">
+<!-- NEW FOR ENV04: the sun / moon -->
+<div id="sky-object">☀️</div>
+<h3 id="welcome">When even your dreams are magical...</h3>
+</div>
+
+<div id="main-zone">
+
+<div id="description">
+<h1>
+Enter a magical dream filled with glowing flowers, sparkling stars, and pastel-colored skies. Discover an enchanted world where you can choose between a graceful unicorn with a rainbow mane or a beautiful fairy with shimmering wings. Both offer a magical adventure full of wonder, mystery, and endless possibilities.
+</h1>
+
+<div id="data-buttons">
+<button id="title-button">dream title</button>
+<button id="elements-button">what's in the dream</button>
+<button id="count-button">make a wish</button>
+</div>
+
+<!-- NEW FOR ENV04: buttons that call the changeTimeOfDay function -->
+<p id="time-label">Change the time of day:</p>
+<div id="time-buttons">
+<button id="sunrise-button">🌅 sunrise</button>
+<button id="day-button">☀️ day</button>
+<button id="night-button">🌙 night</button>
+</div>
+
+<div id="environment-output">Click the fairy, the unicorn, or a button...</div>
+</div>
+
+<div id="image-container">
+<img id="lofi-image" src="fairy.png" alt="A fairy with shimmering wings">
+<img id="lofi-image-2" src="uni.png" alt="A unicorn with a rainbow mane">
+</div>
+
+</div>
+
+</body>
+</html>

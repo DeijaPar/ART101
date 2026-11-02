@@ -1,0 +1,191 @@
+body {
+    background-image: url("cloud.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+/* NEW FOR ENV04: color layer over the background image.
+   JavaScript changes its background-color to change the time of day. */
+#sky-tint {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 1.5s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* NEW FOR ENV04: stars, hidden until night */
+#stars {
+    display: none;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    font-size: 24px;
+    color: #fff6b3;
+    text-shadow: 0 0 10px #fff6b3;
+    animation: twinkle 2s ease-in-out infinite alternate;
+}
+
+.star:nth-child(even) {
+    animation-delay: 1s;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.3; }
+    to   { opacity: 1; }
+}
+
+#top-zone,
+#main-zone {
+    position: relative;
+    z-index: 1;
+}
+
+#top-zone {
+    padding: 25px 40px;
+    text-align: center;
+    background-color: rgba(15, 10, 35, 0.65);
+}
+
+/* NEW FOR ENV04: sun / moon */
+#sky-object {
+    font-size: 48px;
+    margin-bottom: 8px;
+}
+
+#welcome {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    color: #fc49ff;
+    transition: color 1.5s ease;
+}
+
+#main-zone {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px;
+    min-height: 65vh;
+}
+
+#description {
+    flex: 1;
+    max-width: 650px;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #e552ff;
+}
+
+#image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+#lofi-image {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: filter 1.5s ease;
+}
+
+#lofi-image-2 {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: filter 1.5s ease;
+}
+
+#data-buttons,
+#time-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#data-buttons button,
+#time-buttons button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fc49ff;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#data-buttons button:hover,
+#time-buttons button:hover {
+    background-color: #e552ff;
+}
+
+/* NEW FOR ENV04: time buttons get a different color */
+#time-buttons button {
+    background-color: #7b5cff;
+}
+
+#time-buttons button:hover {
+    background-color: #9b85ff;
+}
+
+#time-label {
+    margin: 25px 0 0;
+    font-weight: 700;
+}
+
+#environment-output {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: rgba(15, 10, 35, 0.65);
+    min-height: 40px;
+}
+
+@media (max-width: 700px) {
+    #main-zone {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px;
+    }
+
+    #description {
+        max-width: 100%;
+    }
+
+    #lofi-image {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+}
